@@ -1,0 +1,84 @@
+@use "config/fonts" as f;
+@use "config/variables" as v;
+
+.main-visual {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    & img {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+    }
+
+    & p {
+        color: map-get(v.$colors,textWhite);
+        font-size: map-get(f.$fontSize,title_pc);
+        letter-spacing: 2px;
+        line-height: 2;
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.about-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+    max-width: 1100px;
+
+    & .about-title {
+        text-align: center;
+        margin: 0 auto 50px;
+        color: map-get(v.$colors,textGreen);
+        position: relative;
+
+        &:after {
+            content: "";
+            margin: 0 auto;
+            height: 3px;
+            width: 60px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: map-get(v.$colors,textGreen);
+        }
+    }
+    
+    & .about-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // align-items: center;で大きさが決まる？
+
+        & .about-container__caption {
+            width: 50%;
+            margin-right: 30px;
+            & img {
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                object-fit:cover;
+            }
+        }
+
+        & .about-container__item {
+            width: 50%;
+            margin-left: 30px;
+
+            & .item__title {
+                margin-bottom: 30px;
+            }
+
+            & .item__title--large {
+                font-size: 25px;
+            }
+        }
+    }
+}

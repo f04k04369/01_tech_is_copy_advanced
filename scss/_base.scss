@@ -1,0 +1,19 @@
+@use "config/fonts" as f; 
+
+body {
+    font-family: map-get(f.$fontFamily,text);
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: map-get(f.$fontSize,title_pc);
+}
+
+p {
+    font-size: map-get(f.$fontSize,text_pc);
+}
+
+a {
+    font-size: map-get(f.$fontSize,text_pc);
+}
