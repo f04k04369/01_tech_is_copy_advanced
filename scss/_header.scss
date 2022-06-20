@@ -3,7 +3,7 @@
 header {
     width: 100%;
     height: 70px;
-    padding: 0 30px;
+    padding: 0 2%;
     display: flex;
     justify-content: center;
 
@@ -45,9 +45,13 @@ header {
             }
             & .list__item--btn {
                 border-radius: 50px;
-                color: map-get(v.$colors,textWhite);
                 background-color: map-get(v.$colors,btnGreen);
                 padding: 10px 30px;
+
+                & a {
+                    color: map-get(v.$colors,textWhite);
+
+                }
             }
         }
     }

@@ -28,9 +28,10 @@
 .about-wrapper {
     width: 100%;
     height: auto;
-    margin: 50px auto;
+    margin: 0px auto;
     max-width: 1100px;
-
+    padding: 50px 5%;
+    
     & .about-title {
         text-align: center;
         margin: 0 auto 50px;
@@ -81,4 +82,196 @@
             }
         }
     }
+}
+
+.service-wrapper {
+    background-color: map-get(v.$colors, backgroundGreen);
+    width: 100%;
+    height: auto;
+    padding: 50px 5%;
+
+    & .service-title {
+        text-align: center;
+        margin: 0 auto 50px;
+        color: map-get(v.$colors,textGreen);
+        position: relative;
+
+        &:after {
+            content: "";
+            margin: 0 auto;
+            height: 3px;
+            width: 60px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: map-get(v.$colors,textGreen);
+        }
+    }
+
+    & .service-wrapper__list {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        
+        max-width: 1100px;
+
+
+        & .list__item {
+            width: 30%;
+            background-color: map-get(v.$colors, backgroundWhite);
+            box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.03);
+
+            & .container__caption {
+                width: 100%;
+                height: auto;
+                
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            & .container__body {
+                width: 100%;
+                height: auto;
+                padding: 20px 20px;
+                text-align: center;
+
+                & .body__title {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+.news-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    max-width: 1100px;
+    padding: 50px 5%;
+
+    & .news-title {
+        text-align: center;
+        margin: 0 auto 50px;
+        color: map-get(v.$colors,textGreen);
+        position: relative;
+
+        &:after {
+            content: "";
+            margin: 0 auto;
+            height: 3px;
+            width: 60px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: map-get(v.$colors,textGreen);
+        }
+    }
+
+    & .news-container {
+        width: 100%;
+        height: auto;
+
+        & .group__list {
+            padding: 20px 55px;
+            border-bottom: 1px solid #ddd;
+
+            & a {
+                display: flex;
+                justify-content: flex-start;
+
+                & .list__date {
+                    padding: 5px;
+                    margin: 0 20px;
+                    border-radius: 50px;
+                    font-size: map-get(f.$fontSize, news_date);
+
+                }
+
+                & .list__date--gray {
+                    background-color: map-get(v.$colors, backgroundGray);
+
+                }
+
+                & .list__date--white {
+                    color: map-get(v.$colors,textGray);
+
+                }
+            }
+        }
+
+        & .action__btn {
+            margin: 50px auto 0px;
+            padding: 15px;
+        }
+
+        & .action__btn--circle {
+            border-radius: 50px;
+            border: solid 0.5px;
+            display: block;
+            text-align: center;
+            width: 300px;
+        }
+    }
+
+}
+
+.contact-wrapper {
+    background-color: map-get(v.$colors, backgroundGreen);
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 5%;
+
+
+    & .contact-title {
+        text-align: center;
+        margin: 0 auto 50px;
+        color: map-get(v.$colors,textGreen);
+        position: relative;
+
+        &:after {
+            content: "";
+            margin: 0 auto;
+            height: 3px;
+            width: 60px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: map-get(v.$colors,textGreen);
+        }
+    }
+
+    & .contact-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        & .contact__catch {
+            width: fit-content;
+            margin: 0 auto;
+            text-align: center;
+            font-size: map-get(f.$fontSize, title_pc)
+        }
+    }
+    & .action__btn {
+        padding: 15px;
+        width: 300px;
+        display: block;
+        margin: 50px auto;
+        color: map-get(v.$colors, textWhite);
+        text-align: center;
+    }
+    & .action__btn--circle {
+        border-radius: 50px;
+
+    }
+    & .action__btn--green {
+        background-color: map-get(v.$colors, btnGreen);
+    }
+
 }
