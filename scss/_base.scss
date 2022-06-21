@@ -1,6 +1,7 @@
 @use "config/fonts" as f; 
 @use "config/variables" as v;
 
+
 body {
     font-family: map-get(f.$fontFamily,text);
     color: map-get(v.$colors,textBlack);

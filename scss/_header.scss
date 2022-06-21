@@ -1,4 +1,5 @@
 @use "config/variables" as v;
+@use "mixin" as m;
 
 header {
     width: 100%;
@@ -21,6 +22,10 @@ header {
 
             & img {
                 height: 100%;
+                @include m.mq(sp) {
+                    width: 170px;
+                    height: auto;
+                }
             }
         }
         & .nav-wrapper__list {
@@ -29,11 +34,17 @@ header {
             display: flex;
             justify-content: space-around;
             align-items: center;
+        }
+        
+        & .list__item {
+            color: map-get(v.$colors,textBlack );
+            margin: 0 30px;
 
-            & .list__item {
-                color: map-get(v.$colors,textBlack );
-                margin: 0 30px;
-
+            // SP用非表示
+            @include m.mq(sp) {
+                display: none;
+            }
+            
                 &:first-child {
                     margin-left: 0;
 
@@ -42,7 +53,6 @@ header {
                     margin-right: 0;
                 }
 
-            }
             & .list__item--btn {
                 border-radius: 50px;
                 background-color: map-get(v.$colors,btnGreen);
