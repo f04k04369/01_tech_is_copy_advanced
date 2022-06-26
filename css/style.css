@@ -37,6 +37,12 @@ header {
   padding: 0 2%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width:767px) {
+  header {
+    padding: 0 30px;
+  }
 }
 header .nav-wrapper {
   width: 100%;
@@ -66,28 +72,86 @@ header .nav-wrapper .nav-wrapper__list {
   justify-content: space-around;
   align-items: center;
 }
-header .nav-wrapper .list__item {
-  color: #333333;
-  margin: 0 30px;
-}
 @media screen and (max-width:767px) {
-  header .nav-wrapper .list__item {
+  header .nav-wrapper .nav-wrapper__list {
     display: none;
   }
 }
-header .nav-wrapper .list__item:first-child {
+header .nav-wrapper .nav-wrapper__list .list__item {
+  margin: 0 30px;
+  color: #333333;
+}
+header .nav-wrapper .nav-wrapper__list .list__item:first-child {
   margin-left: 0;
 }
-header .nav-wrapper .list__item:last-child {
+header .nav-wrapper .nav-wrapper__list .list__item:last-child {
   margin-right: 0;
 }
-header .nav-wrapper .list__item .list__item--btn {
+header .nav-wrapper .nav-wrapper__list .list__item--btn {
   border-radius: 50px;
   background-color: #00ABAE;
   padding: 10px 30px;
 }
-header .nav-wrapper .list__item .list__item--btn a {
+header .nav-wrapper .nav-wrapper__list .list__item--btn a {
   color: #ffffff;
+}
+header .nav-wrapper #nav-sp-wrapper__list {
+  display: none;
+}
+header .nav-wrapper .nav-sp-wrapper__list--show {
+  display: block !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 70%;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  z-index: 1;
+}
+header .nav-wrapper .nav-sp-wrapper__list--show .sp-list__item {
+  text-align: center;
+  margin: 50px auto;
+}
+header .nav-wrapper .nav-sp-wrapper__list--show .sp-list__item a {
+  color: #333333;
+}
+header .nav-wrapper .nav-sp-wrapper__list--show .sp-list__item:last-child {
+  margin-bottom: 0;
+}
+header .nav-wrapper .nav-sp-wrapper__list--show .sp-list__item:last-child a {
+  color: #ffffff;
+}
+header .nav-wrapper .nav-sp-wrapper__list--show .sp-list__item--btn {
+  border-radius: 50px;
+  background-color: #00ABAE;
+  padding: 10px 30px;
+}
+header .nav-wrapper #sp-menu {
+  display: none;
+}
+@media screen and (max-width:767px) {
+  header .nav-wrapper #sp-menu {
+    display: block;
+  }
+}
+header .nav-wrapper #sp-menu i {
+  color: #00ABAE;
+}
+
+#sp-menu-background {
+  display: none;
+}
+
+.sp-menu-background--show {
+  display: block !important;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1254901961);
 }
 
 .main-visual {
@@ -286,15 +350,31 @@ header .nav-wrapper .list__item .list__item--btn a {
   padding: 20px 55px;
   border-bottom: 1px solid #ddd;
 }
+@media screen and (max-width:767px) {
+  .news-wrapper .news-container .group__list {
+    padding: 20px 0px;
+  }
+}
 .news-wrapper .news-container .group__list a {
   display: flex;
   justify-content: flex-start;
+}
+@media screen and (max-width:767px) {
+  .news-wrapper .news-container .group__list a {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .news-wrapper .news-container .group__list a .list__date {
   padding: 5px;
   margin: 0 20px;
   border-radius: 50px;
   font-size: 10px;
+}
+@media screen and (max-width:767px) {
+  .news-wrapper .news-container .group__list a .list__date {
+    margin: 20px 0;
+  }
 }
 .news-wrapper .news-container .group__list a .list__date--gray {
   background-color: #EEEEEE;
@@ -360,6 +440,55 @@ header .nav-wrapper .list__item .list__item--btn a {
   border-radius: 50px;
 }
 .contact-wrapper .action__btn--green {
+  background-color: #00ABAE;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 5%;
+}
+.form-wrapper .form-title {
+  text-align: center;
+  margin: 0 auto 50px;
+  color: #333333;
+  position: relative;
+}
+.form-wrapper .form-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.form-wrapper .form-container .form__item {
+  margin-bottom: 20px;
+  position: relative;
+}
+.form-wrapper .form-container .form__item .item__text span {
+  background-color: #FF0000;
+  color: #ffffff;
+  font-size: 10px;
+  margin: 0px 10px;
+}
+.form-wrapper .form-container .form__item .item__input-area {
+  padding: 10px;
+  border: solid 0.5px #00ABAE;
+  border-radius: 5px;
+}
+.form-wrapper .form-container .form__item .item__input-area--large {
+  height: 45vh;
+}
+.form-wrapper .action__btn {
+  padding: 15px;
+  width: 300px;
+  display: block;
+  margin: 50px auto;
+  color: #ffffff;
+  text-align: center;
+}
+.form-wrapper .action__btn--circle {
+  border-radius: 50px;
+}
+.form-wrapper .action__btn--green {
   background-color: #00ABAE;
 }
 
